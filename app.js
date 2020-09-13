@@ -1,7 +1,9 @@
 // Selectors
 const cityInput = document.getElementById("city-input");
 const submitButton = document.getElementById("submit-button");
-const tempInput = document.getElementsByClassName("temp");
+const city = document.getElementsByClassName("city");
+const temp = document.getElementsByClassName("temp");
+const hiLow = document.getElementsByClassName("hi-low");
 
 APPID = "87c1a9317c06c8b7e6a81e8c3546a99e";
 API = "https://api.openweathermap.org/data/2.5/weather?";
@@ -35,7 +37,9 @@ function getData() {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      tempInput[0].childNodes[0].nodeValue = Math.round(data.main.temp);
+      city[0].childNodes[0].nodeValue = data.name;
+      temp[0].childNodes[0].nodeValue = Math.round(data.main.temp);
+      hiLow[0].childNodes[0].nodeValue = Math.round(data.main.temp_max);
+      hiLow[0].childNodes[2].nodeValue = Math.round(data.main.temp_min);
     });
 }

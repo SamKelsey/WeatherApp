@@ -67,7 +67,8 @@ body {
   padding-bottom: 2rem;
 }
 .temp {
-  font-size: 3rem;
+  font-size: 5rem;
+  font-weight: 500;
   padding-bottom: 1rem;
 }
 .hi-low {
