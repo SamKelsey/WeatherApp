@@ -5,7 +5,6 @@ const city = document.getElementsByClassName("city");
 const temp = document.getElementsByClassName("temp");
 const hiLow = document.getElementsByClassName("hi-low");
 
-APPID = "87c1a9317c06c8b7e6a81e8c3546a99e";
 API = "https://api.openweathermap.org/data/2.5/weather?";
 UNITS = "metric";
 
